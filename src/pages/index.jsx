@@ -34,6 +34,7 @@ export default function Home() {
                 <ContactCard></ContactCard>
             </div>
 
+
             <div className="bg__lightblue">
                 <div className="paragraph page__container">Terapia a distancia: Tan eficaz como la terapia presencial, cómoda, rápida y sencilla. No sólo hago terapia presencial, también existe la opción de hacer terapia online. Si vives lejos de Écija y alrededores o no tienes tiempo, es tu opción. Dispongo de los medios para que ayudarte allá donde estés.
                 </div>
