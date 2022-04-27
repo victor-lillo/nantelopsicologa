@@ -1,0 +1,36 @@
+.test {
+    border: 1px solid red;
+    display: inline-block;
+    width: 10em;
+    height: 10em;
+    stroke-width: 0;
+    stroke: red;
+    fill: green;
+}
+
+.image_background {
+    background-color: rgb(236, 158, 158);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(../../public/assets/img/header1.jpg); */
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+@media (hover:hover) {
+    .test:hover {
+        border: 1px solid red;
+        display: inline-block;
+        width: 10em;
+        height: 10em;
+        stroke-width: 0;
+        stroke: red;
+        fill: blue;
+    }
+}

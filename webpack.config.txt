@@ -1,0 +1,9 @@
+module: {
+    loaders: [
+
+        {
+            test: /\.(png|jpg|woff|svg|eot|ttf|woff2)$/,
+            loader: 'url-loader?limit=8192&name=images/[name].[ext]'
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+/* src: url('../../../public/assets/fonts/contact_card/icomoon.eot?m08syj'); */
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 15px 0;
+}
+
+.item,
+.container_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item {
+    gap: 10px;
+}
+
+
+.container_text {
+    gap: 5px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 1.2rem;
+}
+
+.subtitle {
+    color: rgb(9, 83, 221);
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(236, 162, 234);
+    border: 3px solid rgb(212, 88, 208);
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.logo {
+
+    color: rgb(9, 83, 221);
+    text-align: center;
+    font-family: "icomoon" !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5em;
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
+}
+
+.icon_mail {
+    padding-bottom: 9px;
+}
+
+
+.icon_location:before {
+    content: "\e902";
+}
+
+.icon_mail:before {
+    content: "\e900";
+}
+
+.icon_instagram:before {
+    content: "\e901";
+}
+
+.movidas {
+    color: green;
+    border: 1px solid purple;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+        gap: 25px;
+
+    }
+}
