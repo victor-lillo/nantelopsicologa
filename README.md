@@ -9,7 +9,6 @@ _This template allows you to create a NextJS project, and easily deploy it on Gi
 * [Config](#config-)
 * [Deploy](#deploy-)
 
-
 ## Features ✅
 
 - Navbar with hamburguer menu on mobile viewports.
