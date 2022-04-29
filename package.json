@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "github-first-deploy": "node dev/first-deploy.js && node dev/discord.js",
-    "github-update": "git add . && git commit -m 'commit' && git push && node dev/discord.js"
+    "github-update": "node dev/github-update.js && node dev/discord.js"
   },
   "dependencies": {
     "autoprefixer": "^10.4.2",
