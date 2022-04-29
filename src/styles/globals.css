@@ -229,13 +229,10 @@ body,
 .text__wrapper {}
 
 .page__image-float {
-
   height: 250px;
   /* border: 1px solid white; */
   float: left;
   padding-right: 20px;
-
-
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -284,6 +281,7 @@ html::-webkit-scrollbar-thumb:vertical {
   .navbar {
     display: flex;
     flex-direction: column;
+    padding-bottom: 0;
   }
 
   .page__container {
@@ -313,11 +311,11 @@ html::-webkit-scrollbar-thumb:vertical {
     width: 40px;
     height: 34px;
     position: absolute;
-    top: 46px;
-    right: 7px;
+    top: 38px;
+    right: 10px;
 
     cursor: pointer;
-    opacity: 0.6;
+    opacity: 0;
 
     z-index: 9;
 
@@ -353,7 +351,7 @@ html::-webkit-scrollbar-thumb:vertical {
   .hamburguer-button:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -2px);
-    background: #cc5048;
+    background: rgb(13, 67, 167);
   }
 
   .hamburguer-button:checked~span:nth-child(3) {
@@ -364,16 +362,12 @@ html::-webkit-scrollbar-thumb:vertical {
     transform: rotate(-45deg) translate(-1px, 0px);
   }
 
-  .navbar {
-    border: none;
-  }
-
   .navbar-tabs {
-
     display: flex;
     flex-direction: column;
     text-align: center;
     pointer-events: none;
+    width: 100%;
 
     position: absolute;
     opacity: 0;
@@ -382,9 +376,8 @@ html::-webkit-scrollbar-thumb:vertical {
 
   .navbar-tabs a {
     margin: 1px;
-    width: 90%;
-    background-color: #fffaee;
-    background-color: #e2ddcf;
+    width: 80%;
+    background-color: rgb(13, 67, 167);
     border-radius: 4px;
   }
 
@@ -396,18 +389,33 @@ html::-webkit-scrollbar-thumb:vertical {
     opacity: 1;
     transition: opacity 1s linear;
     pointer-events: auto;
+    padding-bottom: 20px;
   }
 
   .navbar-tabs .active {
-    background-color: #cc5048;
+    background-color: rgb(125, 163, 235);
     color: #fffaee;
     text-decoration: none;
   }
 
   .paragraph {
     padding: 20px;
+    text-indent: 30px;
   }
 
+  .page__image-float {
+    height: auto;
+    display: flex;
+    margin: auto;
+    width: 60%;
+    float: none;
+    padding: 0;
+  }
+
+  .page__container--image {
+
+    flex-direction: column-reverse;
+  }
 
 }
 
