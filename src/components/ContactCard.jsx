@@ -28,17 +28,17 @@ const ContactCard = ({ className }) => {
                 </div>
             </div>
 
-            <div className={styles.item}>
-                <a href="http://instagram.com/nantelopsicologa" target="_blank" rel="noopener noreferrer">
-                    <div className={styles.logo_container}>
-                        <div className={`${styles.logo} ${styles.icon_instagram}`}></div>
-                    </div>
-                    <div className={styles.container_text}>
-                        <div className={styles.title}>Instagram</div>
-                        <div className={styles.subtitle}>@nantelopsicologa</div>
-                    </div>
-                </a>
-            </div>
+
+            <a className={styles.item} href="http://instagram.com/nantelopsicologa" target="_blank" rel="noopener noreferrer">
+                <div className={styles.logo_container}>
+                    <div className={`${styles.logo} ${styles.icon_instagram}`}></div>
+                </div>
+                <div className={styles.container_text}>
+                    <div className={styles.title}>Instagram</div>
+                    <div className={styles.subtitle}>@nantelopsicologa</div>
+                </div>
+            </a>
+
 
 
         </div>

@@ -43,7 +43,12 @@ a:active {
   color: inherit;
 }
 
-#__next {}
+/* If we want little content pages ocuppy the 100% height */
+html,
+body,
+#__next {
+  height: 100%;
+}
 
 .body {
   display: flex;
@@ -60,6 +65,8 @@ a:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  font-size: 1.3rem;
 }
 
 .navbar {
@@ -81,7 +88,6 @@ a:active {
   opacity: 1;
   transition: opacity 0.5s linear;
 
-  background-color: cornflowerblue;
   background-color: rgb(72, 129, 235);
   color: white;
 
@@ -89,7 +95,7 @@ a:active {
   align-items: center;
 }
 
-.navbar-icon-img {
+.navbar-logo-img {
   width: 100%;
   height: 80px;
   padding: 0 20px;
@@ -99,6 +105,7 @@ a:active {
   stroke-linecap: round;
   stroke-miterlimit: 10;
 }
+
 
 .navbar-hidden {
   opacity: 0;
@@ -143,7 +150,7 @@ a:active {
 .page__container {
   width: 50%;
   /* border: 1px solid green; */
-  padding: 15px 0;
+  padding: 55px 0;
   align-self: center;
 }
 
@@ -151,25 +158,28 @@ a:active {
   color: black;
   font-size: 2rem;
   font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.page__main__subtitle,
+.page__subtitle {
+  color: black;
+  font-weight: bold;
 }
 
 .page__subtitle {
-  color: black;
-  font-size: 1.3rem;
-  font-weight: bold;
+  padding-bottom: 20px;
 }
 
 .page__colored-title {
   color: cornflowerblue;
   text-transform: uppercase;
-  font-size: 1.3rem;
   font-weight: bold;
 }
 
 .paragraph {
   text-align: justify;
   text-indent: 60px;
-  font-size: 20px;
   padding: 15px 0;
   line-height: 160%;
   overflow-wrap: break-word;
@@ -182,13 +192,13 @@ a:active {
 
 .bg__white,
 .bg__lightblue,
-.bg__lightgrey {
-
+.bg__lightgrey,
+.bg__lightpurple {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  width: 100%;
 }
 
 .bg__white {
@@ -196,11 +206,36 @@ a:active {
 }
 
 .bg__lightblue {
+  background-color: #fdf4f4;
+}
+
+.bg__lightpink {
   background-color: rgb(253, 226, 252);
 }
 
-.bg__lightgrey {
-  background-color: lightgray;
+.bg__lightpurple {
+  background-color: #c9c9e5;
+}
+
+/* Contenedor de imagen */
+.page__container--image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* gap: 15px; */
+}
+
+.text__wrapper {}
+
+.page__image-float {
+
+  height: 250px;
+  /* border: 1px solid white; */
+  float: left;
+  padding-right: 20px;
+
+
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -255,7 +290,7 @@ html::-webkit-scrollbar-thumb:vertical {
     width: 90%;
   }
 
-  .navbar-icon-img {
+  .navbar-logo-img {
     padding: 0px;
   }
 

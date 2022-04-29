@@ -28,7 +28,7 @@ function Navbar({ navbarClass }) {
                 <div className="navbar-icon">
 
                     <div>
-                        <Monogram className={"navbar-icon-img"} />
+                        <Monogram />
                     </div>
 
                     <div className="hamburguer-container">

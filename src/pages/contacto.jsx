@@ -4,31 +4,32 @@ import Image from 'next/image'
 
 import Layout from '../components/Layout';
 import ContactCard from '../components/ContactCard';
-import Monogram from '../components/Monogram';
 
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Contact.module.css'
 
 
 export default function Home() {
 
     return (
-        <Layout>
+        <Layout
+            bodyClass={styles.content}
+            contentClass={styles.content}
+        >
             <Head>
                 <title>Natalia Antelo | Contacto</title>
                 <meta name="description" content="Home blablabla"></meta>
             </Head>
-            <h1 className='title page__container'>Contacto</h1>
-
-            <div className="paragraph page__container">Si te interesa lo que has leído y quieres empezar terapia conmigo, tienes cualquier duda o quieres hacerme alguna consulta, escríbeme al correo </div>
-
 
             <div className="page__container">
-                <ContactCard></ContactCard>
+                <h1 className='page__title'>Contacto</h1>
+                <div className="paragraph">Si te interesa lo que has leído y quieres empezar terapia conmigo, tienes cualquier duda o quieres hacerme alguna consulta, escríbeme al correo </div>
             </div>
 
-
-
-            {/* <Monogram className={styles.test} /> */}
+            <div className="bg__lightblue">
+                <div className="page__container">
+                    <ContactCard></ContactCard>
+                </div>
+            </div>
 
         </Layout>
     );

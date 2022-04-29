@@ -1,6 +1,6 @@
 {
   "name": "nextjs-template",
-  "version": "Beta 0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "rimraf .next && next dev",
