@@ -1,93 +1,60 @@
 import React, { useRef } from 'react'
 import Link from 'next/link'
 
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router'
 
 // import logo from '../../public/logo.png';
 
-import Monogram from './Monogram';
+import Monogram from './Monogram'
 
 function Navbar({ navbarClass }) {
+  const navbarRef = useRef(null)
+  const router = useRouter()
 
-    const navbarRef = useRef(null);
-    const router = useRouter();
-
-    const hamburguerHandler = (e) => {
-
-        if (e.target.checked) {
-            navbarRef.current.classList.add("navbar-tabs-displayed")
-        } else {
-            navbarRef.current.classList.remove("navbar-tabs-displayed")
-        }
+  const hamburguerHandler = (e) => {
+    if (e.target.checked) {
+      navbarRef.current.classList.add('navbar-tabs-displayed')
+    } else {
+      navbarRef.current.classList.remove('navbar-tabs-displayed')
     }
+  }
 
-    return (
-        <React.Fragment>
-            <div className={`navbar ${navbarClass ? navbarClass : ''}`} >
+  return (
+    <React.Fragment>
+      <div className={`navbar ${navbarClass ? navbarClass : ''}`}>
+        <div className='navbar-icon'>
+          <div>
+            <Monogram />
+          </div>
 
-                <div className="navbar-icon">
+          <div className='hamburguer-container'>
+            <input className='hamburguer-button' type='checkbox' onChange={hamburguerHandler} />
+            <span className='span1'></span>
+            <span className='span2'></span>
+            <span className='span3'></span>
+          </div>
+        </div>
 
-                    <div>
-                        <Monogram />
-                    </div>
+        <div ref={navbarRef} className='navbar-tabs'>
+          <Link href='/' className={router.pathname == '/' ? 'active' : ''}>
+            Inicio
+          </Link>
 
-                    <div className="hamburguer-container">
-                        <input className="hamburguer-button" type="checkbox" onChange={hamburguerHandler} />
-                        <span className='span1'></span>
-                        <span className='span2'></span>
-                        <span className='span3'></span>
-                    </div>
+          <Link href='/about' className={router.pathname == '/about' ? 'active' : ''}>
+            Sobre mí
+          </Link>
 
-                </div>
+          <Link href='/terapia' className={router.pathname == '/terapia' ? 'active' : ''}>
+            Terapia
+          </Link>
 
-                <div ref={navbarRef} className="navbar-tabs">
-
-                    <Link href="/">
-                        <a
-                            className={router.pathname == "/" ? "active" : ""
-                            }>
-                            Inicio
-                        </a>
-                    </Link>
-
-                    <Link href="/about">
-                        <a
-                            className={router.pathname == "/about" ? "active" : ""
-                            }>
-                            Sobre mí
-                        </a>
-                    </Link>
-
-                    <Link href="/terapia">
-                        <a
-                            className={router.pathname == "/terapia" ? "active" : ""
-                            }>
-                            Terapia
-                        </a>
-                    </Link>
-
-                    <Link href="/contacto">
-                        <a
-                            className={router.pathname == "/contacto" ? "active" : ""
-                            }>
-                            Contacto
-                        </a>
-                    </Link>
-
-                    {/* <Link href="/blog">
-                        <a
-                            className={router.pathname == "/blog" ? "active" : ""
-                            }>
-                            Blog
-                        </a>
-                    </Link> */}
-
-                </div>
-
-            </div>
-        </React.Fragment>
-
-    );
+          <Link href='/contacto' className={router.pathname == '/contacto' ? 'active' : ''}>
+            Contacto
+          </Link>
+        </div>
+      </div>
+    </React.Fragment>
+  )
 }
 
-export default Navbar;
+export default Navbar
